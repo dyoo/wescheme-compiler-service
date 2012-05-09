@@ -43,3 +43,5 @@ Concerns:
 
     Reliability?  How do we guarantee that the service never goes down
     or uses too much space or time?
+
+    How do we report compile-time errors.

@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head><title>WeScheme compiler service</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script src="easyXDM/easyXDM.js" type="text/javascript"></script>
+<script src="index.js" type="text/javascript"></script>
 </head>
 <body>
 <h1>WeScheme compiler service</h1>
 
-<form action="/compile">
+<form>
 <textarea id="source"
           cols="80"
           rows="30">
 </textarea>
-<input type="submit">
+<hr>
+Results:
+<div id="result"></div>
+<hr>
+<input id="submit" type="submit">
 </form>
 
 
