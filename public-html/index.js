@@ -1,4 +1,5 @@
 jQuery(document).ready(function() {
+    $("#result").css('whitespace', 'pre');
 
     var rpc = new easyXDM.Rpc({ remote: "rpc.html" },
                               { remote : { compile : {} }});
@@ -7,8 +8,7 @@ jQuery(document).ready(function() {
         e.preventDefault();
         e.stopPropagation();
 
-
-        rpc.compile($("#source").text(),
+        rpc.compile($("#source").val(),
                     function(result) {
                         $("#result").text(result);
                     },
@@ -16,10 +16,4 @@ jQuery(document).ready(function() {
                         alert(err);
                     });
     });
-
-
-
-    
-
-
 });

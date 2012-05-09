@@ -9,7 +9,9 @@
 
 
 (define (serve-compile-requests req)
-  (response/xexpr '(html (body (p "ok")))))
+  (define the-source (extract-binding/single 'source (request-bindings req)))
+  (response/xexpr `(html (body (p "ok, I saw"
+                                  ,(format "~s" the-source))))))
 
 (serve/servlet serve-compile-requests 
                #:command-line? #t

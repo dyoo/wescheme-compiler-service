@@ -5,9 +5,9 @@
 
 (function() {
 
-    var compile = function(program, onSuccess, onFail) {
+    var compile = function(source, onSuccess, onFail) {
         jQuery.ajax("/compile",
-                    { data : {program : program},
+                    { data : {source : source},
                       success: function(data, textStatus, jqXHR) {
                           onSuccess(data);
                       },
